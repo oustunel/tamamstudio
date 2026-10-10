@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1000" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Tamam checkmark</title>
+  <desc id="desc">A sculpted dark green checkmark set among fine construction lines and a small alignment dot.</desc>
+  <defs>
+    <linearGradient id="face" x1="257" y1="288" x2="765" y2="737" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4D9A6A"/>
+      <stop offset=".48" stop-color="#286F51"/>
+      <stop offset="1" stop-color="#0E4A3A"/>
+    </linearGradient>
+    <linearGradient id="side" x1="504" y1="155" x2="857" y2="827" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#234F3A"/>
+      <stop offset="1" stop-color="#0B362B"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <g stroke="#0E4A3A" stroke-opacity=".16" stroke-width="2">
+    <path d="M44 188 1073 73"/>
+    <path d="M108 931 1134 813"/>
+    <path d="M119 89 213 994"/>
+    <path d="M977 19 1082 918"/>
+  </g>
+  <circle cx="992" cy="102" r="7" fill="#0E4A3A"/>
+  <path d="M158 531 465 792 529 859 1033 207 966 136 801 23 432 506 275 379Z" fill="#17432F" fill-opacity=".17" filter="url(#shadow)" transform="translate(0 29)"/>
+  <path d="M148 520 454 771 527 843 148 552Z" fill="#1D4B36"/>
+  <path d="M949 124 1021 196 527 843 454 771Z" fill="url(#side)"/>
+  <path d="M148 520 273 366 427 491 790 13 949 124 454 771Z" fill="url(#face)"/>
+  <path d="M148 520 273 366 427 491 790 13 949 124" stroke="#8ABE87" stroke-opacity=".48" stroke-width="3"/>
+  <path d="M454 771 527 843 1021 196" stroke="#0A3024" stroke-opacity=".42" stroke-width="3"/>
+  <path d="M273 366 427 491 790 13" stroke="#AED59D" stroke-opacity=".16" stroke-width="2"/>
+</svg>
