@@ -1,8 +1,4 @@
-/* AI Steward concept preview, based on the supplied design brief and film. */
-(function () {
-  'use strict';
-  const KEY = 'steward';
-  const CSS = `
+(function(){"use strict";const KEY="steward";const CSS=`
     .sim-steward{position:absolute;inset:0;overflow:hidden;background:#060B17;color:#F4EFE3;font-family:'Instrument Sans',Arial,sans-serif;box-sizing:border-box}
     .sim-steward *{box-sizing:border-box}
     .sim-steward .st-serif{font-family:'Fraunces',Georgia,serif;font-weight:400}
@@ -39,28 +35,4 @@
     .sim-steward-screen .st-film-foot{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:14px 18px;color:#D8B262;font:500 12px/1.3 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em}
     .sim-steward-screen .st-film-foot small{font:400 12px/1.2 'Instrument Sans',Arial,sans-serif;color:#AEB7CB;text-transform:none;letter-spacing:0}
     .sim-steward-screen .st-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:22px;border-top:1px solid rgba(216,178,98,.22);color:#AEB7CB;font:500 13px/1.3 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
-  `;
-  function css(){
-    if(document.getElementById('sim-steward'))return;
-    const style=document.createElement('style');
-    style.id='sim-steward';
-    style.textContent=CSS;
-    document.head.appendChild(style);
-  }
-  function meter(){return '<svg class="st-meter" viewBox="0 0 120 120" aria-hidden="true"><circle class="st-track" cx="60" cy="60" r="48"/><circle class="st-arc" cx="60" cy="60" r="48" pathLength="100"/><circle class="st-core" cx="60" cy="60" r="34"/></svg>'}
-  window.TAMAM_SIMS=window.TAMAM_SIMS||{};
-  window.TAMAM_SIMS[KEY]={
-    key:KEY,frame:'browser',
-    cover(el){
-      css();
-      el.innerHTML='<div class="sim-steward sim-steward-cover"><div class="st-mark"><i></i>AI Steward</div><div class="st-cover-title">Every credit has a <span class="st-gold">steward.</span></div><div class="st-cover-sub">The AI credit meter for companies</div>'+meter()+'<div class="st-rule"></div></div>';
-    },
-    mount(el,lang){
-      css();
-      const tr=lang==='tr';
-      el.innerHTML='<div class="sim-steward sim-steward-screen"><div class="st-head"><strong>AI Steward</strong><span>'+(tr?'Ürün fikri / AI kredi sayacı':'Product idea / AI credit meter')+'</span></div><div class="st-main"><div><p class="st-label">'+(tr?'HER KREDİNİN BİR GÖREVİ VAR':'EVERY CREDIT HAS A JOB')+'</p><h2>'+(tr?'Her kredinin bir <em>sorumlusu var.</em>':'Every credit has a <em>steward.</em>')+'</h2><p class="st-lead">'+(tr?'Şirketler için yapay zekâ kredi sayacı. Harcamayı kişi, proje ve kullanım amacına bağlayan bir kontrol paneli fikri.':'The AI credit meter for companies. A proposed control plane that ties AI use to people, projects and purpose.')+'</p><p class="st-note">'+(tr?'Fikir aşaması · Gösterilen film bir ürün vizyonudur, çalışan uygulama değildir.':'Idea stage · The film presents a product vision, not shipped software.')+'</p></div><div class="st-film-panel"><video controls playsinline preload="metadata" aria-label="AI Steward concept film"><source src="assets/ai-steward-film.mp4" type="video/mp4"></video><div class="st-film-foot"><span>'+(tr?'Konsept filmi':'Concept film')+'</span><small>'+(tr?'Oynatmak için tıklayın':'Press play to watch')+'</small></div></div></div><div class="st-foot"><span>Get more for less.</span><span>AI Steward · Tamam Studio Technology</span></div></div>';
-      const video=el.querySelector('video');
-      return {destroy(){video?.pause()}};
-    }
-  };
-})();
+  `;function css(){if(document.getElementById("sim-steward"))return;const style=document.createElement("style");style.id="sim-steward";style.textContent=CSS;document.head.appendChild(style)}function meter(){return'<svg class="st-meter" viewBox="0 0 120 120" aria-hidden="true"><circle class="st-track" cx="60" cy="60" r="48"/><circle class="st-arc" cx="60" cy="60" r="48" pathLength="100"/><circle class="st-core" cx="60" cy="60" r="34"/></svg>'}window.TAMAM_SIMS=window.TAMAM_SIMS||{};window.TAMAM_SIMS[KEY]={key:KEY,frame:"browser",cover(el){css();el.innerHTML='<div class="sim-steward sim-steward-cover"><div class="st-mark"><i></i>AI Steward</div><div class="st-cover-title">Every credit has a <span class="st-gold">steward.</span></div><div class="st-cover-sub">The AI credit meter for companies</div>'+meter()+'<div class="st-rule"></div></div>'},mount(el,lang){css();const tr=lang==="tr";el.innerHTML='<div class="sim-steward sim-steward-screen"><div class="st-head"><strong>AI Steward</strong><span>'+(tr?"Ürün fikri / AI kredi sayacı":"Product idea / AI credit meter")+'</span></div><div class="st-main"><div><p class="st-label">'+(tr?"HER KREDİNİN BİR GÖREVİ VAR":"EVERY CREDIT HAS A JOB")+"</p><h2>"+(tr?"Her kredinin bir <em>sorumlusu var.</em>":"Every credit has a <em>steward.</em>")+'</h2><p class="st-lead">'+(tr?"Şirketler için yapay zekâ kredi sayacı. Harcamayı kişi, proje ve kullanım amacına bağlayan bir kontrol paneli fikri.":"The AI credit meter for companies. A proposed control plane that ties AI use to people, projects and purpose.")+'</p><p class="st-note">'+(tr?"Fikir aşaması · Gösterilen film bir ürün vizyonudur, çalışan uygulama değildir.":"Idea stage · The film presents a product vision, not shipped software.")+'</p></div><div class="st-film-panel"><video controls playsinline preload="metadata" aria-label="AI Steward concept film"><source src="assets/ai-steward-film.mp4" type="video/mp4"></video><div class="st-film-foot"><span>'+(tr?"Konsept filmi":"Concept film")+"</span><small>"+(tr?"Oynatmak için tıklayın":"Press play to watch")+'</small></div></div></div><div class="st-foot"><span>Get more for less.</span><span>AI Steward · Tamam Studio Technology</span></div></div>';const video=el.querySelector("video");return{destroy(){video?.pause()}}}}})();
