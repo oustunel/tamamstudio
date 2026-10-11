@@ -344,3 +344,21 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 @media(max-width:1050px){.menu-toggle{margin-left:12px}.main-nav.open{max-height:calc(100dvh - 67px);overflow-y:auto}}
 .quote-panel :focus-visible,.reel-frame :focus-visible{outline-color:#fff}
 @media(max-width:600px){.container .motion-window{margin-inline:calc(-1*clamp(20px,4vw,56px))}}
+/* forms and privacy notice */
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.newsletter-form .consent{flex-basis:100%;display:flex;gap:8px;align-items:flex-start;font-size:12px;line-height:1.4;color:var(--muted)}
+.newsletter-form .consent input{flex:none;min-width:0;width:16px;height:16px;margin:1px 0 0;padding:0}
+.newsletter-form:has(.consent){flex-wrap:wrap}
+.form-status{min-height:1.4em;margin:8px 0 0;font-size:13px;color:var(--forest)}
+.form-status a,.consent a,.agents-demo-form small a{color:var(--forest)}
+button[disabled]{opacity:.6;cursor:progress}
+.privacy{padding-bottom:90px}
+.privacy .paper-panel{max-width:860px}
+.privacy h2{font:700 22px/1.2 var(--display);letter-spacing:-.02em;margin:28px 0 8px}
+.privacy h2:first-child{margin-top:0}
+.privacy p,.privacy li{color:var(--muted);line-height:1.55}
+.privacy ul{padding-left:20px;margin:0 0 6px}
+.privacy li{margin:8px 0}
+.privacy b{color:var(--ink)}
+.privacy-date{font:500 12px var(--mono);margin-top:26px}
+.footer-top .consent a,.footer-top .form-status a{display:inline;padding:0;margin:0;font-size:inherit}
