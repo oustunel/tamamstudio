@@ -141,7 +141,8 @@
 .motion-card-copy{display:flex;flex-direction:column;gap:7px;min-width:0}
 .motion-card-copy strong{font:700 23px/1.1 var(--display);letter-spacing:-.04em;overflow-wrap:anywhere}
 .motion-card-copy span{font-size:13px;line-height:1.35;opacity:.88;overflow-wrap:anywhere}
-.motion-showcase:hover .motion-track,.motion-window:focus-within .motion-track,.motion-showcase.paused .motion-track{animation-play-state:paused}
+.motion-showcase:hover .motion-track,.motion-showcase.paused .motion-track{animation-play-state:paused}
+.motion-window:has(:focus-visible) .motion-track{animation-play-state:paused}
 @keyframes marquee-slide{to{transform:translateX(-50%)}}
 .products-motion{padding-bottom:50px}
 /* The full legend uses the phase numbers already present in the catalogue. */
@@ -329,7 +330,7 @@
 }
 /* 11 Oct 2026 — layout and accessibility fixes */
 .page-hero.container,.section.container,.reel-section.container{padding-inline:clamp(20px,4vw,56px)}
-main{min-height:calc(100vh - 68px)}
+main:not(:empty){min-height:calc(100vh - 68px)}
 .site-footer:empty{display:none}
 .motion-card .motion-kind{opacity:1}
 button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:var(--forest)}
@@ -337,7 +338,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .device-footprint{margin:auto}
 .footer-top a{padding:9px 0;margin:0}
 .lang-toggle,.motion-toolbar button{min-height:40px}
-.quote-panel h2{font-size:clamp(22px,6.6vw,37px)}
+.quote-panel h2.mail-heading{font-size:clamp(22px,6.6vw,37px)}
 .jobs-intro .eyebrow{white-space:nowrap;flex:none}
-@media(min-width:1051px){.modal-view{position:sticky;top:0;align-self:start;height:calc(100vh - 40px);min-height:0}}
+@media(min-width:1121px){.modal-view{position:sticky;top:0;align-self:start;height:calc(100vh - 42px);min-height:0}}
 @media(max-width:1050px){.menu-toggle{margin-left:12px}.main-nav.open{max-height:calc(100dvh - 67px);overflow-y:auto}}
+.quote-panel :focus-visible,.reel-frame :focus-visible{outline-color:#fff}
+@media(max-width:600px){.container .motion-window{margin-inline:calc(-1*clamp(20px,4vw,56px))}}
